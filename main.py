@@ -77,7 +77,7 @@ for ep in range(Epochs):
         a = np.sign(np.dot(x, Wh.T) + bh)
         o = np.sign(np.dot(a, Wo.T) + bo)
 
-        # calculate cross-entropy
+        # calculate mean square error
         Cost[IdxCost] = np.mean(np.mean(np.power((y - o), 2), axis=1))
         IdxCost += 1
 
